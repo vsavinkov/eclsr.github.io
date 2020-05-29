@@ -1,7 +1,5 @@
-source 'https://rubygems.org'
-gemspec
+source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'kramdown'
-gem 'pygments.rb'
+gem 'github-pages'
+# this gem provides regeneration support improvements on Windows
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?

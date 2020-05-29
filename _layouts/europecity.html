@@ -26,7 +26,7 @@
         </div>
         {% endif %}
         <div class="title-bar">
-          <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
+          <h2 class="header-title" itemprop="contactTitle">{{ site.resume_title }}</h2>
           {% include icon-links.html %}
         </div>
         <div class="executive-summary" itemprop="description">
@@ -35,14 +35,11 @@
       </header>
       {% if site.resume_section_experience %}
       <section class="content-section">
-        <header class="section-header">
-          <h2>Experience</h2>
-        </header>
-        {% for job in site.data.experience %}
+        {% for contact in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
+          <h3 class="resume-item-title" itemprop="name">{{ contact.company }}</h3>
+          <h4 class="resume-item-details" itemprop="description">{{ contact.position }} &bull; {{ contact.duration }}</h4>
+          <p class="resume-item-copy">{{ contact.summary }}</p>
         </div>
         {% endfor %}
       </section>
@@ -139,7 +136,7 @@
       </section>
       {% endif %}
       <footer class="page-footer">
-        <p class="footer-line no-print">Built with Jekyll. Hosted on GitHub pages. Viacheslav Savinkov, 2018</p>
+        <p class="footer-line no-print">Built with Jekyll. Hosted on GitHub pages. Viacheslav Savinkov, 2020</p>
       </footer>
     </div>
   </body>
